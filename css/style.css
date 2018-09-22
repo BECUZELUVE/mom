@@ -1,0 +1,230 @@
+html,body{
+	width: 100vw;
+	overflow-x: hidden;
+}
+/*loading动画*/
+.gif{
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	position: fixed;
+	z-index: 1032;
+}
+.loading {
+	width: 200px;
+	height: 100px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.loading>.mouse {
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+.loading>.mouse:before,
+.loading>.mouse:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.loading>.mouse:before {
+	border-top: 50px solid skyblue;
+	border-left: 50px solid skyblue;
+	border-bottom: 50px solid transparent;
+	border-right: 50px solid transparent;
+	transform: rotate(0deg);
+	animation: mouse1move 500ms linear infinite;
+}
+
+.loading>.mouse:after {
+	border-top: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-bottom: 50px solid skyblue;
+	border-right: 50px solid skyblue;
+	transform: rotate(90deg);
+	animation: mouse2move 500ms linear infinite;
+}
+
+.loading .food {
+	width: 300px;
+	height: 20px;
+	position: absolute;
+	left: 10px;
+	top: 40px;
+	animation: foodmove 1s linear infinite;
+}
+
+.loading .food>li {
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: skyblue;
+	margin: 0 20px;
+}
+
+@keyframes mouse1move {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes mouse2move {
+	0% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes foodmove {
+	0% {
+		left: 10px;
+	}
+	100% {
+		left: -110px;
+	}
+}
+/*菜谱分享页面*/
+.share{
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	position: fixed;
+	z-index: 1031;
+}
+header .shareBtn{
+	position: fixed;
+	top: 0.3125rem;
+	left: -0.1562rem;
+	z-index: 1031;
+	background-color: transparent !important;
+}
+.shareBtn>i{
+	color: skyblue;
+	font-size: 0.3906rem;
+}
+.share>.row{
+	width: 9.6093rem;
+	height: 7.8125rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+/*头部搜索栏*/
+header{
+	width: 100%;
+	height: 0.7812rem;
+	margin-top: 0.1562rem;
+}
+header>.input-group{
+	width: 100%;
+	height: 0.7812rem;
+}
+header input{
+	margin-left: 1.25rem;
+	width: 90% !important;
+	height: 0.7812rem !important;
+	font-size: 0.3125rem !important;
+}
+header .input-group-addon{
+	width: 15%;
+	font-size: 0.3906rem;
+	color: #fff;
+	background-color: skyblue;
+	border: none;
+}
+/*banner区*/
+.swiper-slide{
+	margin: 0.3125rem 0;
+	text-align: center;
+}
+.swiper-slide>img{
+	width: 100%;
+}
+/*中间内容部分*/
+.row h3{
+	text-align: center;
+	font-size: 0.3125rem;
+}
+.content .row a{
+	text-decoration: none;
+}
+.content .row img{
+	width: 4.6875rem !important;
+	height: 3.125rem !important;
+}
+/*底部导航栏*/
+footer,footer .container{
+	height: 1.25rem;
+}
+footer .container>ul {
+	width: 100%;
+	height: 0.7812rem;
+	margin: 0.2343rem 0;
+	text-align: center;
+	display: flex;
+}
+
+footer .container>ul>li {
+	flex: 1;
+	font-size: 0.3125rem;
+
+}
+ul>li.active{
+	color: dodgerblue;
+}
+
+/*菜谱样式*/
+.menu{
+	width: 100%;
+	height: 1.25rem;
+}
+.menu>h2{
+	height: 1.25rem;
+	font-size: 0.4687rem;
+	line-height: 1.25rem;
+}
+.menu>h2>a{
+	margin-right: 40%;
+	text-decoration: none;
+}
+/*菜谱中的进度条*/
+.progress,.progress-bar{
+	height:0.4687rem !important;
+	font-size: 0.3125rem !important;
+	line-height: 0.4687rem !important;
+}
+
+.frech-fries .row dl{
+	font-size: 0.4687rem;
+}
+.frech-fries .icon img{
+	border: 0.0156rem solid #ccc;
+	border-radius: 50%;
+	padding: 0.1562rem;
+	margin: 4.6875rem 0.3125rem 0 0.3125rem;
+	width: 1.5625rem;
+}
+.frech-fries .icon img.active{
+	border: 5px solid greenyellow;
+}
